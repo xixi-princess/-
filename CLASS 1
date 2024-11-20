@@ -1,0 +1,175 @@
+前言：
+HTML的学习方式是，在编译器里写代码，在浏览器里看效果。
+常用的编译器：
+Sublime Text/WebStorm/HBuilder X/vsCode
+常用的浏览器：谷歌
+
+一、HTML基本知识：
+1、HTML的定义：
+超文本标记语言（Hyper Text Markup Language）
+
+2、标签语法：
+<（开始标签）> 标签内容 <结束标签>
+
+示例：<strong> 需要加粗的文字</strong>
+
+3、注意事项 
+*标签成对出现，中间包裹内容
+
+*<>里面放英文字母，结束标签比开始标签多/
+
+*双标签是成对出现的标签，单标签只有开始标签（例如<br>换行，<hr>水平线）
+
+4、核心总结：
+1.保存HTML标签的文件扩展名是.html
+
+2.HTML标签名要放到尖括号里
+
+3.结束标签比开始标签多/
+
+4.标签包裹的内容放在开始与结束标签之间
+
+二、HTML的基本骨架
+HTML的基本骨架是网页模板
+<html>
+   <head>
+       <title> 网页标题 </title>
+   </head>
+   <body>
+      网页主体
+   </body>
+</html>
+其中<html>指整个网页，<head>指网页头部，存放给浏览器看的代码，<body>指网页主体，存放给用户看的代码，例如图片和文字，<title>指的是网页标题。
+​
+三、基本标签的使用和基本语法
+1、标签的关系：
+父子关系（嵌套关系）兄弟关系（并列关系）
+作用是明确代码的书写位置
+
+2、注释：
+<!--内容-->
+ 作用是对代码的解释和说明，提高代码的可读性
+
+3、标题标签
+一般用于新闻、文章、网页区域名称、产品名称等
+标签名是h1~h6，且属于双标签。
+显示特点：1、文字加粗；2、字号随尾标数字增大而减小；3、独占一行
+*h1标签在一个网页中只能用一次，用来放新闻标题或网页logo
+*h2~h6没有使用次数的限制
+示例：
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>一级标题</h1>
+    <h2>二级标题</h2>
+    <h3>三级标题</h3>
+    <h4>四级标题</h4>
+    <h5>五级标题</h5>
+    <h6>六级标题</h6>
+</body>
+</html>
+
+4、段落标签
+一般用在新闻段落、文章段落、产品描述信息等
+标签名是p，且属于双标签。
+显示特点：1、独占一行；2、段落之间存在空隙
+示例：
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>看下面</h1>
+    <p>我的第一个段落标签</p>
+    <p>我的第二个段落标签</p>
+</body>
+</html>
+
+5、换行与水平线标签
+*换行标签为br，属于单标签，放置于要换行的两段内容之间，可嵌套在段落标签中。
+*水平线标签为hr，属于单标签
+示例：
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    你好啊
+    你好啊
+    <br>
+    你好啊
+    <br>
+    <hr>你好啊
+</body>
+</html>
+
+6、文本格式化标签
+为文本添加特殊格式，以突出重点。常见的有加粗、倾斜、下划线、删除线等
+标签	效果	标签	效果
+strong	加粗	b	加粗
+em	倾斜	i	倾斜
+ins	下划线	u	下划线
+del	删除线	s	删除线
+示例：
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>一段很特别的话</h1>
+    <p><strong>每个人</strong><em>都</em><ins>很爱</ins><del>学习</del></p>
+</body>
+</html>
+
+7、图像标签
+在网页中插入图片
+标签是<img src="图片的url">
+src用于指定图像的位置和名称，是<img>的必须属性
+其他属性
+alt	替换文本	图片无法显示时显示的文字
+title	提示文本	鼠标悬停在图片上显示的文字
+width	图片的宽度	值为数字无单位
+height	图片的高度	值为数字无单位
+
+8、路径
+指的是查找文件时，从起点到终点经历的路线
+分为相对路径（从当前文件位置出发查找的目标文件）和绝对路径（从盘符出发查找目标文件）
+../(上一级文件夹）./ (当前文件夹）/（进入某个文件夹里）
+例如<img src="c:\...\...\图片 ">为绝对路径的写法
+
+9、超链接
+点击后可跳转到其他的页面
+<a href="跳转链接的url">超链接的文字内容</a>
+href属性值是跳转地址，是超链接的必须属性
+target="_blank"可以以新窗口打开超链接
+#为空链接表示
+
+10、音频链接
+<audio src="音频的url">内容</audio>
+常见属性
+src（必须）	音频的url	支持MP3、ogg、wav
+controls	显示音频的控制面板	
+loop	循环播放	
+autoplay	自动播放	
+
+11、视频标签
+<video src="视频的url">内容</video>
+常见属性同上，还有一条
+muted	静音播放
+​
+​
